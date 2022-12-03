@@ -1,0 +1,18 @@
+.error {
+  width: 100%;
+  margin-top: rem(80);
+  height: 40vh;
+  flex-direction: column;
+  gap: rem(33);
+  .content {
+    text-align: center;
+    font-weight: bold;
+    font-size: rem(44);
+  }
+  .button {
+    background: $green-input;
+    color: $white;
+    padding: rem(7) rem(15);
+    border-radius: rem(9) !important;
+  }
+}

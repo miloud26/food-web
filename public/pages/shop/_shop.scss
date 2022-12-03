@@ -1,0 +1,159 @@
+.shop {
+  margin-top: rem(120);
+  padding-top: rem(120);
+  padding-bottom: rem(120);
+  background-color: #f4f4f4;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  &__filter {
+    width: rem(330);
+    background-color: $white;
+    border-radius: rem(25);
+    padding: rem(25);
+    box-shadow: 0px -1px 12px -3px rgb(51 51 51 / 75%);
+
+    &__search {
+      form {
+        padding-top: rem(25);
+        input[type="text"] {
+          margin-bottom: rem(25);
+          padding: rem(12) rem(15);
+          border-radius: rem(10);
+          background-color: $white;
+          color: black;
+          border: 1px solid rgb(134, 125, 125);
+          width: 100%;
+        }
+        input[type="submit"] {
+          margin-bottom: rem(25);
+          padding: rem(12) rem(15);
+          border-radius: rem(10);
+          background-color: $green-input;
+          color: black;
+          color: $white;
+          border: 1px solid rgb(134, 125, 125);
+          width: 100%;
+        }
+      }
+    }
+    &__price {
+      margin-top: rem(50);
+      input[type="range"] {
+        margin-bottom: rem(33);
+      }
+      input[type="submit"] {
+        margin-bottom: rem(25);
+        padding: rem(12) rem(25);
+        border-radius: rem(10);
+        background-color: $green-input;
+        color: black;
+        color: $white;
+        border: 1px solid rgb(134, 125, 125);
+      }
+    }
+    &__categorys {
+      margin-top: rem(55);
+      .categorys {
+        ul {
+          li {
+            transition: 0.6s;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: rem(12) rem(18) !important;
+            a {
+              font-size: 22px;
+              font-weight: bold;
+              letter-spacing: 3.6px !important;
+            }
+            span {
+              font-weight: bold;
+            }
+            &:hover {
+              color: green;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__items {
+    padding: rem(25);
+
+    width: calc((100% - 330px));
+    &__products {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2%;
+      .card {
+        width: 48%;
+        background-color: $bg-slider !important;
+        border: 0 !important;
+        padding: rem(35) 0 0 0 !important;
+        margin-bottom: rem(25);
+        .card-img {
+          overflow: hidden;
+          img {
+            border-radius: rem(25) rem(25) 0 0;
+          }
+        }
+        .card-info {
+          margin-top: rem(15);
+          padding: rem(0) rem(25);
+          h5 {
+            color: rgb(175, 168, 168);
+            margin-bottom: rem(12);
+          }
+          h1 {
+            margin-bottom: rem(12);
+          }
+          .stars {
+            i {
+              color: gold;
+              font-size: rem(18);
+              margin-bottom: rem(12);
+            }
+          }
+          .price {
+            font-weight: bold;
+            font-size: rem(22);
+            margin-top: rem(12);
+          }
+          .buynow {
+            transition: 0.7s;
+            padding: 0.65rem 1.5625rem;
+            border-radius: 0.625rem;
+            background-color: #017e57;
+            color: #fff;
+            border: 1px solid rgb(134, 125, 125);
+            font-weight: bold;
+            &:hover {
+              color: #017e57;
+              background-color: #fff;
+              border: 1px solid #0ada98;
+            }
+          }
+        }
+        @media screen and (max-width: 1300px) {
+          width: 100%;
+        }
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  @include mobile {
+    &__filter {
+      display: none;
+      transform: translateX(-110%);
+    }
+  }
+}

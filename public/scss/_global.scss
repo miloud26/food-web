@@ -1,0 +1,62 @@
+@import "./media";
+@import "./var";
+@import "./mixin";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: $font-family;
+  letter-spacing: 1.5px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  transition: 0.5s;
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+  &:hover {
+    color: $green-input;
+  }
+}
+i {
+  cursor: pointer;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.section {
+  width: 100%;
+  padding: 0 rem(140);
+  @include tablet {
+    padding: 0 rem(80);
+  }
+  @include mobile {
+    padding: 0 rem(30);
+  }
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+  @include tablet {
+    font-size: 80%;
+  }
+  @include mobile {
+    font-size: 60%;
+  }
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,54 @@
+.footer .content {
+  flex-direction: column;
+  gap: rem(25);
+  margin-top: rem(70);
+  background-color: $bg-footer !important;
+  padding: rem(55);
+  padding-top: rem(90) !important;
+  padding-bottom: 0 !important;
+  .info {
+    h5 {
+      color: $white;
+    }
+    h1 {
+      color: $white;
+    }
+  }
+  &__news__mail {
+    max-width: rem(800);
+    min-width: rem(600);
+    input {
+      width: 80%;
+      background-color: $green-input;
+      padding: rem(12) rem(20);
+      border-radius: rem(25) 0 0 rem(25);
+      font-size: rem(18);
+      color: $white;
+      &::placeholder {
+        color: $white;
+      }
+      &:focus {
+        color: $white;
+        box-shadow: 2px 4px 10px -1px #017e57;
+      }
+    }
+    &__btn {
+      input {
+        cursor: pointer;
+        width: rem(240);
+        background-color: #fb7645;
+        padding: rem(12) rem(20);
+        border-radius: 0 rem(25) rem(25) 0;
+        font-size: rem(18);
+        color: $white;
+        font-weight: bold;
+      }
+    }
+  }
+  .last {
+    margin-top: rem(50);
+    padding: rem(50);
+    border-top: 1px rgba(255, 255, 255, 0.438) solid;
+    width: 100%;
+  }
+}
